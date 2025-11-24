@@ -5,19 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INFOMASTER</title>
     <link rel="stylesheet" href="css/estilo.css">
-    <script type="text/javascript">
-        //alert("Ricardo!")
-        var hora = new Date().getHours()
-        if(){
+    
+    
 
-        }else if(){
-            
-        }
-    </script>
 </head>
 <body>
     <header>
         <H1>INFOMASTER</H1>
+        <p id="mensagem"></p>
     </header>
     <nav>
         <a href="">Inicio</a>
@@ -27,6 +22,24 @@
     <section>
         <p>Impressoras, Informática e Assistência Técnica.</p>
         <p>Fone: 77 9 9118-1045</p>
+        <script type="text/javascript">
+        //alert("Ricardo!")
+        var hora = new Date().getHours()
+        var saudacao
+        
+        if( hora < 12){
+            saudacao = "Bom dia."
+        }
+        
+        else if( hora < 18){
+            saudacao = "Boa Tarde."
+        }
+        
+        else{
+            saudacao = "Boa Noite."
+        }
+        document.getElementById("mensagem").innerHTML = saudacao
+    </script>
     </section>
     <footer>
         &copy;2025 - INFOMASTER.
